@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=League+Spartan:wght@100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- <h1>To Do List - Productivity tool to track all your work.</h1> -->
+    <div class="outerContainer">
+        <div class="sidePanel">
+            <div class="upperUserSection">
+                <h1>Welcome User!!!</h1>
+                <img src="static/mayank.jpg" alt="user iamge" srcset="">
+            </div>
+            <div class="basicOperationSection">
+                <h3 id="add-task-side-btn" onclick="togglePopup(event)"><span><img src="static/add.png" alt=""
+                            srcset=""></span> Add Task</h3>
+                <h3><span><img src="static/magnifying-glass.png" alt=""></span> Search</h3>
+                <h3><span><img src="static/calendar.png" alt="" srcset=""></span> Today</h3>
+                <h3><span><img src="static/calendar1.png" alt="" srcset=""></span> Calender</h3>
+            </div>
+        </div>
+        <div class="container">
+            <div class="mainContent">
+                <h3>Today - 31/07/2024</h3>
+                <div class="mainInsideContainer">
+                    <div class="task-cards">
+                        <!-- <img src="static/circle.png" alt="" srcset=""> -->
+                        <span class="unchecked"></span>
+                        <p>I am Mayank Verma</p>
+                        <span><img src="static/bin.png" alt="" srcset=""></span>
+                    </div>
+                    <div class="task-cards">
+                        <img src="static/circle.png" alt="" srcset="">
+                        <p>I am Mayank Verma</p>
+                        <span><img src="static/bin.png" alt="" srcset=""></span>
+                    </div>
+                    <div class="task-cards">
+                        <img src="static/circle.png" alt="" srcset="">
+                        <p>I am Mayank Verma</p>
+                        <span><img src="static/bin.png" alt="" srcset=""></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popupModalOuterContainer" id="popupOverlay">
+        <div class="popup-box">
+            <h2 style="color: green;">Add Task</h2>
+            <form class="form-container">
+                <input class="form-input" type="text" placeholder="Enter Your Task" id="task" name="task" required>
+
+                <button class="btn-submit" id="btn-addtask-submit" type="submit" onclick="addData(event)">
+                    Submit
+                </button>
+            </form>
+            <button class="btn-close-popup" onclick="togglePopup(event)">
+                Close
+            </button>
+        </div>
+    </div>
+    <script src="todo.js"></script>
+</body>
+
+</html>
